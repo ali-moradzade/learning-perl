@@ -1,0 +1,13 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+
+# whilrwind tour
+
+@lines = `perldoc -u -f atan2`;
+foreach (@lines) {
+	s/\w<(.+?)>/\U$1/g;
+	print;
+}
