@@ -1,0 +1,16 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# code point
+
+$alef = chr( 0x05D0 );
+$alpha = chr( hex('03B1') );
+$omega = chr( 0x03C9 );
+
+say "$alef $alpha $omega";

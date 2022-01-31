@@ -1,0 +1,21 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# interpreting nondecimal numerals
+
+say hex('DEADBEEF');
+say hex('0xDEADBEEF');
+
+say oct('0377');
+# say oct('0o377'); # does not work!
+say oct('0xDEADBEEF');
+say oct('0b1101');
+
+$bits = 11_111_111;
+say oct("0b$bits");

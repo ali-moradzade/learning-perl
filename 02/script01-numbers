@@ -1,0 +1,36 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use v5.10;
+use utf8;
+
+# numbers
+
+say 255;
+say 0377;
+say 0xff;
+say 0b11_111_111;
+
+# floating point
+say 1.25;
+say 255.000;
+say 7.25e45;
+say -6.5e24;
+
+# hex with floating point
+say 0x1f.0p3;
+
+# =================
+# numeric operators
+say "==============";
+
+say 2 + 3;
+say 5.1 - 2.4;
+say 3 * 12;
+say 14 / 2;
+say 10.2 / 0.3;
+say 10 / 3;
+
+say 2 ** 3;

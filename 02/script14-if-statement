@@ -1,0 +1,14 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# if statement
+$name = 'fredy';
+if ($name gt 'fred') {
+	print "'$name' comes after 'fred' in sorted order.\n";
+}

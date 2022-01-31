@@ -1,0 +1,16 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# normalize to boolean
+
+$still_true = !! 'Fred';
+say $still_true;
+
+$still_false = !! '0';
+print $still_false;

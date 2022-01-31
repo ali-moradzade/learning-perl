@@ -1,0 +1,31 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+# use warnings;
+use v5.10;
+use utf8;
+
+# interpolation of scalar variables into strings
+
+$meal = "brontosaurus steak";
+$barney = "fred ate a $meal";
+say $barney;
+
+$barney = 'fred ate a ' . $meal;
+say $barney;
+
+$barney = "fred ate a $meet";
+say $barney;
+
+# printing a dollor sign
+$fred = 'hello';
+print "The name is \$fred.\n";
+
+$what = "brontosaurus steak";
+$n = 3;
+print "fred ate $n $whats.\n";
+print "fred ate $n ${what}s.\n";
+print "fred ate $n $what" . "s.\n";
+print 'fred ate ' . $n . ' ' . $what . "s.\n";

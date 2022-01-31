@@ -1,0 +1,22 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# scalar variables
+
+$fred = 17;
+say $fred;
+
+$barney = 'hello';
+say $barney;
+
+$barney = $fred + 3;
+say $barney;
+
+$barney = $barney * 2;
+say $barney;

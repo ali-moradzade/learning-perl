@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+#ex2 04 multiply
+
+print "Enter first number: ";
+chomp($first = <STDIN>);
+
+print "Enter second number: ";
+chomp($second = <STDIN>);
+
+$result = $first * $second;
+say "The result is: $result";

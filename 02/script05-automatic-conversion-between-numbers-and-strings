@@ -1,0 +1,20 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+
+# automatic conversion between numbers and strings
+
+# strings to numbers
+print 3 * 12 . "\n";
+print "12" * "3" . "\n";
+print "12fred34" * " 3" . "\n";
+print "fred" * 3 . "\n";
+
+# difference with octal
+print 0377 * 01 . "\n";
+print "0377" * "01" . "\n";
+
+# numbers to strings
+print "Z" . 5 * 7 . "\n"; # same as "Z" . 35, or "Z35"

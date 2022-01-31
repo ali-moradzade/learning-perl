@@ -1,0 +1,21 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+
+# string operators
+
+# =========================
+# concatenation operator: . 
+
+print "hello" . "world\n";
+print "hello" . ' ' . "world\n";
+print 'hello world' . "\n";
+
+# ======================
+# repetition operator: x
+
+print "fred" x 3 . "\n";
+print "barney" x (4 + 1) . "\n";
+print 5 x 4.8 . "\n"; # is really "5" x 4, which is "5555"

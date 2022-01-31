@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+#ex2 05 printing string number of times
+
+print "Enter a string: ";
+$string = <STDIN>;
+
+print "Enter a number: ";
+chomp($number = <STDIN>);
+
+print $string x $number;

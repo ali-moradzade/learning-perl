@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# circumference circle user input negative checking
+
+print "enter circle radius: ";
+chomp($radius = <STDIN>);
+
+if ($radius < 0) {
+	say "circumference is 0";
+}
+else {
+	$pi = 3.141592654;
+	$circumference = 2 * $pi * $radius;
+
+	say "circumference is $circumference";
+}
+

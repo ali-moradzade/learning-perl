@@ -1,0 +1,34 @@
+#!/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/01/31
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# compound assignment operators
+
+$fred = 10;
+say $fred;
+
+$fred += 5;
+say $fred;
+
+$barney = 100;
+say $barney;
+
+$barney *= 3;
+say $barney;
+
+$barney **= 3;
+say $barney;
+
+$barney -= 3;
+say $barney;
+
+$str = "Hello World";
+say $str;
+
+$str .= " two";
+say $str;
