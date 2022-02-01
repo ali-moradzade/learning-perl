@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# reverse operator
+
+@fred = 6..10;
+say "@fred";
+
+@barney = reverse(@fred);
+say "@barney";
+
+@wilma = reverse(1..10);
+say "@wilma";
+
+# reverse does not affect its argument
+say "@fred";

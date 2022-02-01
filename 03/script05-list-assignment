@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+# use warnings;
+use v5.10;
+use utf8;
+
+# list assignment
+
+($fred, $barney, $dino) = ("flintstone", "rubble", undef);
+say $fred;
+say $barney;
+say $dino;
+
+say "";
+$fred = "fred";
+$barney = "barney";
+
+say $fred;
+say $barney;
+say "";
+
+($fred, $barney) = ($barney, $fred);
+
+say $fred;
+say $barney;
+say "";
+
+# ======================
+($rocks[0], $rocks[1], $rocks[2], $rocks[3]) = qw/talc mica feldspar quartz/;
+say @rocks;
+
+@rocks = qw/ bedrock slate lava /;
+say @rocks;
+
+@quarry = (@rocks, "crushed rock", "dino");
+say @quarry;
+

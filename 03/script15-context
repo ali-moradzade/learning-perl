@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# context
+
+@people = qw(fred barney betty);
+say "@people";
+
+$number = @people;
+say "$number";
+say "";
+
+@backwards = reverse qw/ yabba dabba doo /;
+say "@backwards";
+
+$backwards = reverse qw /yabba dabba doo/;
+say "$backwards";

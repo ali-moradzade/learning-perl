@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# each operator
+
+@rocks = qw/bedrock slate rubble granite/;
+while (($index, $value) = each @rocks) {
+	say "$index: $value";
+}
+
+say "";
+foreach $index (0 .. $#rocks) {
+	say "$index: $rocks[$index]";
+}

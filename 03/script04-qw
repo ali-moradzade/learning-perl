@@ -1,0 +1,41 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# qw
+
+say ("fred", "barney", "betty", "wilma", "dino");
+say qw( fred barney betty wilma dino ); # same as earlier, but less typing
+
+say qw(
+	fred
+	barney
+	betty
+	wilma
+	dino
+);
+
+# put your favorite delimter
+say "";
+say qw( fred barney betty wilma dino ); 
+say qw! fred barney betty wilma dino !;
+say qw/ fred barney betty wilma dino /;
+
+# put different delimter
+say "";
+say qw( fred barney betty wilma dino);
+say qw{ fred barney betty wilma dino };
+say qw[ fred barney betty wilma dino ];
+say qw< fred barney betty wilma dino >;
+
+# using for pathnames
+say "";
+say qw {
+	/usr/dict/words
+	/home/ali/.bash_aliases
+};

@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# special array indices
+
+$rocks[0] = 'bedrock';      # One element...
+$rocks[1] = 'slate';        # another...
+$rocks[2] = 'lava';         # and another...
+$rocks[3] = 'crushed rock'; # and another...
+$rocks[99] = 'schist';      # now there are 95 undef elements
+
+say $#rocks;
+
+$number_of_rocks = $#rocks + 1;
+$rocks[ $number_of_rocks ] = 'hard rock'; # the last rock
+
+say $rocks[-1];
+say $rocks[-101];

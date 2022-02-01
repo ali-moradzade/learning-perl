@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# shift unshift
+
+@array = qw# dino fred barney #;
+say @array;
+
+$m = shift(@array);
+$n = shift(@array);
+
+say $m;
+say $n;
+say @array;
+
+unshift(@array, 5);
+say @array;
+
+unshift(@array, 1..10);
+say @array;

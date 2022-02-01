@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# accessing elements of array
+
+$fred[0] = "yabba";
+$fred[1] = "dabba";
+$fred[2] = "doo";
+
+say $fred[0], $fred[1], $fred[2];
+
+$fred[2] = "diddley";
+$fred[1] .= "whatsis";
+
+say $fred[0], $fred[1], $fred[2];
+
+$number = 2.71828;
+say $fred[$number - 1]; # $fred[1]
+
+$blank = $fred[142_857];
+if (!defined($blank)) {
+	print "'blank' is not defined";
+}

@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+#ex3 02 list of persons
+
+@list = qw/fred betty barney dino wilma pebbles bamm-bamm/;
+
+say "Enter some numbers from 1 to ", scalar(@list), ", one per line, then press Ctrl-D: ";
+chomp(@numbers = <STDIN>);
+
+foreach $number (@numbers) {
+	say "Person is: $list[$number - 1]";
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# clearning array
+@wilma = undef; # OOPS! Gets the one-element list (undef) # which is not the same as this:
+
+@betty = ( ); # A correct way to empty an array
+

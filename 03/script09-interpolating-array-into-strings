@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# interpolating array into strings
+
+@rocks = qw{flintstone slate rubble};
+say "quartz @rocks limestone";
+
+say "Three rocks are: @rocks.";
+say "There's nothing in the parens (@empty) here.";
+
+$email = "fred@bedrock.edu";
+say $email;
+
+$email = "fred\@bedrock.edu";
+say $email;
+
+@fred = qw/hello dolly/;
+$y = 2;
+say "This is $fred[1]'s place.";
+say "This is $fred[$y - 1]'s place.";
+say "";
+
+@fred = qw(eating rocks is wrong);
+$fred = "right";
+print "this is $fred[3]\n"; # prints "wrong" using $fred[3]
+print "this is ${fred}[3]\n"; # prints "right" (protected by braces)
+print "this is $fred"."[3]\n"; # right again (different string)
+print "this is $fred\[3]\n"; # right again (backslash hides it)
+

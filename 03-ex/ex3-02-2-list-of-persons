@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+#ex3 02 2 list of persons
+
+@names = qw/ fred betty barney dino wilma pebbles bamm-bamm /;
+
+say "Enter some numbers between 1 and ", scalar(@names), ", then press ctrl-d:";
+chomp(@numbers = <STDIN>);
+
+foreach (@numbers) {
+	say "$names[$_ - 1]";
+}

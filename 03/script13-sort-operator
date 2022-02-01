@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# sort operator
+
+@rocks = qw/bedrock slate rubble granite/;
+say "@rocks";
+
+@sorted = sort(@rocks);
+say "@sorted";
+say "@rocks";
+
+@reverse_sorted = reverse sort(@rocks);
+say "@reverse_sorted";

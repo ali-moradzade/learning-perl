@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+#ex3 01 reverse list input
+
+say "Enter some strings, then enter end-of-line:";
+@lines = <STDIN>;
+
+say "\nLines in reverse order:";
+@lines = reverse(@lines);
+say @lines;

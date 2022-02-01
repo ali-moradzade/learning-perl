@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# foreach control structure
+
+foreach $rock (qw/ bedrock slate lava/) {
+	say "One rock is $rock.";
+}
+say	"";
+
+@rocks = qw/bedrock slate lava/;
+foreach $rock (@rocks) {
+	$rock = "\t$rock";
+	$rock .= "\n";
+}
+
+print "The rocks are:\n", @rocks;
+
+# ================================
+# loop variables autmatically saves
+$rock = 'shale';
+@rocks = qw/bedrock slate lava/;
+
+say "before loop: ", $rock;
+
+foreach $rock (@rocks) {
+	say "\t", $rock;
+}
+say "after loop: ", $rock;
