@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# sorted iterating
+
+my %hash = ('a', 1, 'c', 3, 'b', 2);
+
+foreach $k (sort keys %hash) {
+	$v = $hash{$k};
+
+	say "$k => $v";
+}

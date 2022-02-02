@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# hash element access
+
+$family_name{'fred'} = 'flintstone';
+$family_name{'barney'} = 'rubble';
+
+foreach my $person (qw/ barney fred/) {
+	say "I've heard of $person $family_name{$person}.";
+}
+
+$foo = 'bar';
+say $family_name{$foo . 'ney'};
+
+$bedrock = $family_name{'fred'};
+say $bedrock;
+
+$family_name{'wilma'} = 'flintstone';
+$family_name{'betty'} .= $family_name{'barney'};
+
+say $family_name{'betty'};

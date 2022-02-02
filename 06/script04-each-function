@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# each function
+
+my %hash = (
+	a => 1,
+	b => 2,
+	c => 3,
+);
+
+while (($k, $v) = each %hash) {
+	say "$k => $v";
+}

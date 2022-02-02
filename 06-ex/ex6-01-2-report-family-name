@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex6 01 2 report family name
+
+my %last_name = qw {
+	fred flinstone
+	barney rubble
+	wilma flinstone
+};
+
+print "Please enter a first name: ";
+chomp(my $name = <STDIN>);
+
+say "That's $name $last_name{$name}.";

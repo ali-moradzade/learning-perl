@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# hash functions
+
+my %hash = (
+	a => 1,
+	b => 2,
+	c => 3,
+);
+
+say keys %hash;
+say values %hash;
+
+my $count = keys %hash;
+say $count;

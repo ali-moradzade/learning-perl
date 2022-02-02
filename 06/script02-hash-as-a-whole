@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# hash as a whole
+
+%some_hash = ('foo', 35, 'bar', 12.4, 2.5, 'hello',
+	'wilma', 1.72e30, 'betty', "bye\n");
+say $some_hash{'foo'};
+
+my @any_array = %some_hash;
+say "@any_array";
+
+my %last_name = (
+	'fred' => 'flintstone',
+	'dino' => 'flintstone',
+	'barney' => 'rubble',
+	'betty' => 'rubble',
+);
+
+say %last_name;
+
+%last_name = (
+	fred => 'flintstone',
+	dino => 'flintstone',
+	barney => 'rubble',
+	betty => 'rubble',
+);
+
+say %last_name;

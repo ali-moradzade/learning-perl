@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex6 01 report family name
+
+my %names = (
+	fred => 'flintstone',
+	barney => 'rubble',
+	wilma => 'flintstone',
+);
+
+print "Enter use name: ";
+chomp($name = <STDIN>);
+
+if (exists $names{$name}) {
+	say "Family name is: $names{$name}";
+} else {
+	say "Sorry! i don't know the family.";
+}

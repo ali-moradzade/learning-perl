@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# delete function
+
+$books{'fred'} = 3;
+$books{'wilma'} = 1;
+$books{"barney"} = 0;
+$books{"pebbles"} = undef;
+$books{"betty"} = 20;
+
+while (($v, $k) = each %books) {
+	say "$v ==> $k";
+}
+
+my $person = "betty";
+delete $books{$person};
+
+say "\nNew hash:";
+while (($v, $k) = each %books) {
+	say "$v ==> $k";
+}

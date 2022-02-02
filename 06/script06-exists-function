@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# exists function
+
+my %books = ('fred', 3, 'wilma', 1, 'barney', 0);
+
+while(($k, $v) = each %books) {
+	printf "%7s => %s\n", $k, $v;
+}
+
+if (exists $books{'dino'}) {
+	say "Hey, there's a library card for dino!";
+}

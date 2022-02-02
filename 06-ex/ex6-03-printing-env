@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex6 03 printing env
+
+my $max_length = 0;
+while (($k, $v) = each %ENV) {
+	if (length($k) > $max_length) {
+		$max_length = length($k);
+	}
+}
+
+say "Summary of ENV hash:";
+while (($k, $v) = each %ENV) {
+	printf "%*s : %s\n", $max_length, $k, $v;
+}

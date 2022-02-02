@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex6 02 report names
+
+say "Enter some names on each line, then press ctr-d:";
+chomp(@lines = <STDIN>);
+
+my %report;
+
+foreach (@lines) {
+	if (exists $report{"$_"}) {
+		$report{"$_"}++;
+	} else {
+		$report{"$_"} = 1;
+	}
+}
+
+say "\nSummary of each word repetition:";
+foreach $k (sort keys %report) {
+	printf "%10s : %s\n", $k, $report{$k};
+}
