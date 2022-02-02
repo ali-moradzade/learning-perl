@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.12;
+use utf8;
+
+# return operator
+
+sub which_element_is {
+	my($what, @array) = @_;
+	foreach (0..$#array) {
+		if ($what eq $array[$_]) {
+			return $_;
+		}
+	}
+	return -1;
+}
+
+my @names = qw/fred barney betty dino wilma pebbles bamm-bamm/;
+my $result = &which_element_is("dino", @names);
+say $result;

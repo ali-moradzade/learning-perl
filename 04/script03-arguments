@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# arguments
+
+sub max {
+	if ($_[0] > $_[1]) {
+		$_[0];
+	} else {
+		$_[1];
+	}
+}
+
+say &max(10, 20);

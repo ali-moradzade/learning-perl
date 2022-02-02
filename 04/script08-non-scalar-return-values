@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# non scalar return values
+
+sub list_from_fred_to_barney {
+	if ($fred < $barney) {
+		$fred..$barney;
+	} else {
+		reverse $barney..$fred;
+	}
+}
+
+$fred = 11;
+$barney = 6;
+@c = &list_from_fred_to_barney;
+
+say "@c";

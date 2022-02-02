@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# 2 persistant private variables
+
+sub next_fibbonaci {
+	state @numbers = (0, 1);
+	push @numbers, $numbers[-2] + $numbers[-1];
+
+	return $numbers[-1];
+}
+
+say next_fibbonaci();
+say next_fibbonaci();
+say next_fibbonaci();
+say next_fibbonaci();
+say next_fibbonaci();
+say next_fibbonaci();
+say next_fibbonaci();

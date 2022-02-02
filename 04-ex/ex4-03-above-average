@@ -1,0 +1,43 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+#ex4 04 above average
+
+sub sum {
+	my $sum = 0;
+	foreach (@_) {
+		$sum += $_;
+	}
+	return $sum;
+}
+
+sub average {
+	if (@_ == 0) {return 0;}
+
+	return &sum(@_) / @_;
+}
+
+sub above_average {
+	my $average = &average(@_);
+	my @numbers = ();
+	foreach (@_) {
+		if ($_ > $average) {
+			push(@numbers, $_);
+		}
+	}
+	return @numbers;
+}
+
+my @fred = above_average(1..10);
+print "\@fred is @fred\n";
+print "(Should be 6 7 8 9 10)\n";
+my @barney = above_average(100, 1..10);
+print "\@barney is @barney\n";
+print "(Should be just 100)\n";
+

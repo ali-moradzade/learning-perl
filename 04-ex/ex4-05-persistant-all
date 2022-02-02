@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+#ex4 05 persistant all
+
+sub greet {
+	state @names = ();
+
+	my $name = shift;
+	print "Hi $name! ";
+
+	if (@names) {
+		say "I've seen: @names";
+	}
+	else {
+		say "You are the first one here!";
+	}
+
+	push(@names, $name);
+}
+
+greet("Fred");
+greet("Barney");
+greet("Wilma");
+greet("Betty");
+

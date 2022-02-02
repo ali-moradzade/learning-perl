@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# ex4 04 persistant variable
+
+sub greet {
+	state $last_person;
+
+	my $name = shift;
+	print "Hi $name! ";
+
+	if (defined($last_person)) {
+		say "$last_person is also here!";
+	}
+	else {
+		say "You are the first one here!";
+	}
+
+	$last_person = $name;
+}
+
+&greet("Fred");
+&greet("Barney");

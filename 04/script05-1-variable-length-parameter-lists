@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# variable length parameter lists
+
+sub max {
+	if (@_ != 2) {
+		say "WARNING! &max should get exactly two arguments!";
+	}
+	my($first, $second) = @_;
+
+	if ($first > $second) {$first} else {$second}
+}
+
+say &max(1, 2, 3);
+say &max(1, 10);

@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# return values
+
+sub sum_of_fred_and_barney {
+	say "Hey, you call the sum_of_fred_and_barney subroutine!";
+	$fred + $barney; # that's the return value
+}
+
+sub larger_of_fred_or_barney {
+	if ($fred > $barney) {
+		$fred;
+	} else {
+		$barney;
+	}
+}
+
+$fred = 3;
+$barney = 4;
+$wilma = &sum_of_fred_and_barney;
+say "\$wilma is $wilma.";
+
+$betty = 3 * &sum_of_fred_and_barney;
+say "\$betty is $betty.";
+
+say "";
+say &larger_of_fred_or_barney;

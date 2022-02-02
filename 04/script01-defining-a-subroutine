@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/01
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# defining a subroutine
+
+sub marine {
+	$n += 1; # global variable $n
+	say "Hello, sailor number $n!";
+}
+
+&marine;
+&marine;
+&marine;
+&marine;
