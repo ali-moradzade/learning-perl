@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# changing default output filehandle
+
+open BEDROCK, '>', 'bedrockfile';
+
+select BEDROCK;
+say "I hope Mr. Slate doesn't find out about this.";
+say "Wilma!";
+
+select STDOUT;
+say "Messages where successfylly written to bedrockfile!";

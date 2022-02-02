@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex5 03 user choosing column width
+
+print "Enter width of column: ";
+chomp($width = <STDIN>);
+
+say "Enter some strings then press ctr-d:";
+chomp(@lines = <STDIN>);
+
+say "1234567890" x (($width + 9) / 10);
+foreach (@lines) {
+	printf "%*s\n", $width, $_;
+}

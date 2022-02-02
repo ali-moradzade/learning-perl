@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# input from standard input
+
+while (defined($line = <STDIN>)) {
+	print "I saw $line";
+}
+say "first reading finished.";
+
+# shortcut
+while (<STDIN>) {
+	print "I saw $_";
+}
+say "second reading finished.";
+
+foreach (<STDIN>) {
+	print "I saw $_";
+}

@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# invocation arguments
+
+say "@ARGV";
+while (<>) {
+	chomp;
+	print "It was $_ that I saw in some stooge-like file!\n";
+}

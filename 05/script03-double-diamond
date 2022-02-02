@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.22;
+use utf8;
+
+# double diamond
+
+while (<<>>) {
+	chomp;
+	say "It was $_ that I saw!";
+}

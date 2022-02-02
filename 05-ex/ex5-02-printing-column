@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex5 02 printing column
+
+say "Enter strings separated by line, then press ctrl-d:";
+chomp(@lines = <>);
+
+say "1234567890" x 5;
+foreach (@lines) {
+	printf "%20s\n", $_;
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+
+# arrays and printf
+
+my @items = qw( wilma dino pebbles );
+
+my $format = "The items are:\n" . ("%10s\n" x @items);
+printf $format, @items;
+
+printf "The items are:\n" . ("%10s\n" x @items), @items;
