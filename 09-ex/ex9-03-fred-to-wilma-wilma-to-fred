@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex9 03 fred to wilma wilma to fred
+
+while (<>) {
+	s/fred/___TEMP___/ig;
+	s/wilma/Fred/ig;
+	s/___TEMP___/Wilma/g;
+	print;
+}

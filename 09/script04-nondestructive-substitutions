@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# nondestructive substitutions
+
+my $orignial = "Fred ate 1 rib";
+say "$orignial";
+
+(my $copy = $orignial) =~ s/\d+ ribs?/10 ribs/;
+say "=" x length($orignial);
+say "$orignial";
+say "$copy";

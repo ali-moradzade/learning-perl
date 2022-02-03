@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# binding operator
+
+$file_name = "~/works/perl/chapter09/binding-operator";
+say "$file_name";
+
+# remove path from file, any Unix-style path
+$file_name =~ s#\A.*/##s;
+say "$file_name";

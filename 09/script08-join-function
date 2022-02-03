@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# join function
+
+say join ":", 4, 6, 8, 1..5, 10;
+say join "", 4, 6, 8, 1..10;
+
+my $value = join "-", 1..20;
+say "$value";

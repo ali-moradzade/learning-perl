@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# global replacements
+
+$_ = "home, sweet home!";
+say;
+s/home/cage/g;
+say;
+say "";
+
+# collapse whitespace
+$_ = "Input data\t may have       extra whitespace.";
+say;
+s/\s+/ /g;
+say;
+say "";
+
+# strip leading and trailing whitespaces
+$_ = "\t  Input data\t may have       extra whitespace.   \t";
+say "|$_|";
+s/^\s+//;
+say "|$_|";
+s/\s+$//;
+say "|$_|";
+s/\s+/ /g;
+say "|$_|";
+say "";
+

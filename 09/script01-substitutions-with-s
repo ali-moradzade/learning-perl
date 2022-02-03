@@ -1,0 +1,51 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# substitutions with s
+
+$_ = "He's out bowling with Barney tonight.";
+say;
+s/Barney/Fred/;
+say;
+
+s/Wilma/Betty/;
+say;
+say "";
+
+$_ = "He's out bowling with Barney tonight.";
+say;
+s/with (\w+)/against $1's team/;
+say;
+say "";
+
+$_ = "green scaly dinosaur";
+say;
+s/(\w+) (\w+)/$2, $1/;
+say;
+s/^/huge, /;
+say;
+s/,.*een//;
+say;
+s/green/red/;
+say;
+s/\w+$/($`!)$&/;
+say;
+s/\s+(!\W+)/$1 /;
+say;
+s/huge/gignastic/;
+say;
+say "";
+
+$_ = "fred flintstone";
+say;
+if (s/fred/wilma/) {
+	say;
+	say "Successfully replaced fred with wilma!";
+}

@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# case shifting
+
+$_ = "I saw baRneY with FrED.";
+say;
+
+(my $copy = $_) =~ s/(fred|barney)/\U$1/gi;
+say "$copy";
+
+($copy = $_) =~ s/(fred|barney)/\L$1/gi;
+say "$copy";
+
+($copy = $_) =~ s/(fred|barney)/\u$1/gi;
+say "$copy";
+
+($copy = $_) =~ s/(fred|barney)/\l$1/gi;
+say "$copy";
+say "";
+
+$name = 'ALI Mordazade';
+say "Hello, \L\u$name\E, would you like to play a game?";
+
+my $start = "Fred";
+my $uncapp = lcfirst( $start ); # fred 
+say "$uncapp";
+
+my $uppered = uc( $uncapp ); # FRED
+say "$uppered";
+
+my $lowered = lc( $uppered ); # fred 
+say "$lowered";
+
+my $capped = ucfirst( $lowered ); # Fred
+say "$capped";
+

@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex9 02 make modified copy of text file
+
+$^I = ".out";
+
+while (<>) {
+	s/Fred/Larry/ig;
+	print;
+}

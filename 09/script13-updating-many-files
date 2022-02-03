@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+use strict;
+
+# updating many files
+
+chomp(my $date= `date`);
+$^I = ".bak";
+
+while (<>) {
+	s/\AAuthor:.*/Author: Randal L. Schwartz/;
+	s/\APhone:.*\n//;
+	s/\ADate:.*/Date: $date/;
+	print;
+}

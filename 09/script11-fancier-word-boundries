@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# fancier word boundries
+
+$_ = "This doesn't capitalize correctly.";
+say;
+
+s/\b(\w)/\U$1/g;
+say;
+say "";
+
+$_ = "This doesn't capitalize correctly.";
+say;
+
+s/\b{wb}(\w)/\U$1/g;
+say;

@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex9 05 do not adding twice
+
+my %do_these;
+foreach (@ARGV) {
+	$do_these{$_} = 1;
+}
+
+# remove files that has been processed already.
+while (<>) {
+	if (/&##Copyright/) {
+		delete $do_these{$ARGV};
+	}
+}
+
+@ARGV = sort keys %do_these;
+$^I = ".bak";
+exit unless @ARGV;
+
+while (<>) {
+	if (/^#!/) {
+		$_ .= "## Copyright (c) 2022 by Ali Moradzade\n";
+	}
+	print;
+}

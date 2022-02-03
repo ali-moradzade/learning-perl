@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex9 04 adding copyright line
+
+$^I = ".bak";
+
+while (<>) {
+	s/^(#!.*\n)/$1## Copyright (C) 2022 by Ali Moradzade\n/m;
+	print;
+}

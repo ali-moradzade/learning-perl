@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# matching multiple line text
+
+$_ = "I'm much better\nthan Barney is\nat bowling,\nWilma.\n";
+say;
+
+say "Found 'wilma' at start of line" if /^wilma\b/im;
+say "";
+
+my $filename = 'script01-substitutions-with-s';
+open FILE, '<', $filename
+	or die "can't open '$filename': $!";
+
+my $lines = join '', <FILE>;
+# $lines =~ s/^/$filename: /gm;
+
+say $lines;

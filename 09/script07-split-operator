@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# split operator
+
+sub print_list {
+	foreach (@_) {
+		print "'$_' ";
+	}
+	say "";
+}
+
+$_ = "abc:def:g:h";
+say;
+my @fields = split /:/;
+print_list(@fields);
+say "";
+
+# we have an empty field here
+$_ = "abc:def::g:h";
+say;
+@fields = split /:/;
+print_list(@fields);
+say "";
+
+# we have an empty field here
+$_ = ":::a:b:c:::";
+say;
+@fields = split /:/;
+print_list(@fields);
+say "";
+
+$_ = "This  is a \t         test.";
+say;
+@fields = split /\s+/;
+print_list(@fields);
+say "";

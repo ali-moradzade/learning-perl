@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# match in list context
+
+$_ = "Hello there, neighbor!";
+say;
+
+my ($first, $second, $third) = /(\S+) (\S+) (\S+)/;
+say "$second is my $third";
+say "";
+
+my $text = "Fred dropped a 5 ton granite block on Mr. Slate";
+my @words = ($text =~ /([a-z]+)/ig);
+say "Result: @words";
