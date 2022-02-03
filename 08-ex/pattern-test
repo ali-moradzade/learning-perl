@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# pattern test
+
+while (<>) {
+	chomp;
+	if (/YOUR_PATTERN_GOES_HERE/) {
+		say "\tMatched: |$`<$&>$'|";
+	} else {
+		say "\tNo match: |$_|";
+	}
+}

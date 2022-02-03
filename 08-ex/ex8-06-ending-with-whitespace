@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex8 06 ending with whitespace
+
+while (<>) {
+	chomp;
+	if (/\s+$/) {
+		say "\tIt has whitespace in tail.";
+		say "\t|$_|";
+	} else {
+		say "\tDoes not have whitespace in tail.";
+	}
+}

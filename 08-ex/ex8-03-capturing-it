@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex8 03 capturing it
+
+while (<>) {
+	chomp;
+	if (/\b(\w+a)\b/) {
+		say "\tMatched: |$`<$&>$'|";
+		say "\t\$1 contains: '$1'";
+	} else {
+		say "\tNo match: |$_|";
+	}
+}

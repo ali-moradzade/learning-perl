@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#scrip05 captures in alternations
+
+$_ = "Fred and Pebbles";
+if (/(F\w+)|(P\w+)/) {
+	say "1: $1\n2: $2";
+}
+
+$_ = "Fred and Pebbles";
+if (/((F\w+)|(P\w+))/) {
+	say "1: $1";
+}
+
+say "";
+$_ = "Fred and Pebbles";
+if (/
+	(?|   #$1
+		(F\w+) |
+		(P\w+) |
+		(Dino)
+	)
+	\s+
+	(\w+) #$2
+/x) {
+	say "1: $1\n2: $2";
+}

@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex8 05 up to 5 characters
+
+while (<>) {
+	chomp;
+	if (/\b(?<name>\w+a)\b(?<up_to>.{0,5})/) {
+		say "\tMatched: |$`<$&>$'|";
+		say "\t\$+{name} contains: '$+{name}'";
+		say "\tup to five characters: '$+{up_to}'";
+	} else {
+		say "\tNo match: |$_|";
+	}
+}

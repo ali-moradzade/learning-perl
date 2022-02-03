@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# automatic match variables
+
+if ("Hello there, neighbor" =~ /\s(\w+),/) {
+	say "That acctually matched '$&'.\n";
+}
+
+if ("Hello there, neighbor" =~ /\s(\w+),/) {
+	say "That was ($`)($&)($').";
+}

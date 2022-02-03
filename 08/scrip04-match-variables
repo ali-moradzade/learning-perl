@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#scrip04 match variables
+
+$_ = "Hello there, neighbor";
+if (/\s([a-zA-Z]+),/) {
+	say "The word was: $1";
+}
+
+$_ = "Hello there, neighbor";
+if (/(\S+) (\S+), (\S+)/) {
+	say "words were: '$1', '$2', '$3'";
+}
+
+my $dino = "I fear that I'll be extinct after 1000 years.";
+if ($dino =~ /([0-9]*) years/) {
+	print "That said '$1' years.\n"; # 1000
+}
+
+$dino = "I fear that I'll be extinct after a few million years.";
+if ($dino =~ /([0-9]*) years/) {
+	print "That said '$1' years.\n"; # empty string
+}
+
+say "";
+my $wilma = '123';
+$wilma =~ /([0-9]+)/; # Succeeds, $1 is 123
+$wilma =~ /([a-zA-Z]+)/; # BAD! Untested match result
+say "Wilma's word was $1... or was it?"; # Still 123!
+
+if ($wilma =~ /([a-zA-Z]+)/) {
+	print "Wilma's word was $1.\n";
+} else {
+	print "Wilma doesn't have a word.\n";
+}
+

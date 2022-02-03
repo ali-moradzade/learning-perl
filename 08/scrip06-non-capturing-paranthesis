@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#scrip06 non capturing paranthesis
+
+$_ = "brontosaurus steak";
+if (/(?:bronto)?saurus (steak|burger)/) {
+	say "Fred wants a $1";
+}
+
+$_ = "brontosaurus BBQ steak";
+if (/(?:bronto)?saurus (?:BBQ )(steak|burger)/) {
+	say "Fred wants a $1";
+}

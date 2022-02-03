@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#scrip07 named captures
+
+my $names = 'Fred or Barney';
+if ($names =~ /(\w+) and (\w+)/) {
+	say "I saw $1 and $2";
+}
+$names = 'Fred or Barney';
+if ($names =~ /(\w+) (and|or) (\w+)/) {
+	say "I saw $1 and $2";
+}
+
+$names = 'Fred or Barney';
+if ($names =~ /(?<fred>\w+) (and|or) (?<barney>\w+)/) {
+	say "I saw $+{fred} and $+{barney}";
+}
+
+$names = 'Fred Flintstone and Wilma Flintstone';
+if ($names =~ /(?<last_name>\w+) (and|or) \w+ \g{last_name}/) {
+	say "I saw $+{last_name}";
+}

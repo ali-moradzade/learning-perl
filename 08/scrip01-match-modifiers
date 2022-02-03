@@ -1,0 +1,50 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# match modifiers
+
+# cae insensitive matching
+print "Would you like to play a game? ";
+$_ = "YES";
+say;
+if (/yes/i) {
+	say "In that case, I recommend that you go bowling.";
+}
+say "";
+
+# dot match evreything
+$_ = "I saw Barney\ndown at the bowling alley\nwith Fred\nlast night.";
+say;
+if (/Barney.*Fred/s) {
+	print "That string mentions Fred after Barney!\n";
+}
+
+say "";
+$_ = "-99.2342";
+if (/
+	-?     # optional minus sign
+	[0-9]+ # one or more digits
+	\.?    # optional decimal point
+	[0-9]  # some optional digits after the decimal point
+/x) {
+	say "I found a floating-point number!";
+}
+
+say "";
+# combining option modifiers
+$_ = "I saw Barney\ndown at the bowling alley\nwith Fred\nlast night.";
+say;
+if (/
+	barney
+	.*
+	fred
+/six) {
+	print "That string mentions Fred after Barney!\n";
+}

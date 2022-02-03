@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex8 04 named captures
+
+while (<>) {
+	chomp;
+	if (/\b(?<name>\w+a)\b/) {
+		say "\tMatched: |$`<$&>$'|";
+		say "\t\$+{name} contains: '$+{name}'";
+	} else {
+		say "\tNo match: |$_|";
+	}
+}

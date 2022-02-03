@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# beginning and end of line anchors
+
+$_ = 'This is wilma line
+barney is on another line
+but this ends in fred
+and a final dino line';
+
+say;
+if (/fred$/m) {
+	say "multiline fred matched.";
+}
+if (/fred$/) {
+	say "non-multiline fred matched.";
+}
