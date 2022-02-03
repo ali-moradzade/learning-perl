@@ -1,0 +1,96 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# wildcard
+
+$_ = "yabba dabba doo";
+
+if (/ab.a/) {
+	say "It matches!(1)";
+}
+
+if (/doo./) {
+	say "It matches!(2)";
+}
+
+$_ = "yabba dabba doo.";
+
+if (/doo\./) {
+	say "It matches!(3)";
+}
+
+$_ = 'a real \\ backslash';
+if (/\\/) {
+	say "It matches!(4)";
+}
+
+$_ = 'Bamm-bamm';
+if (/Bamm-?bamm/) {
+	say "It matches!(5)";
+}
+$_ = 'Bammbamm';
+if (/Bamm-?bamm/) {
+	say "It matches!(6)";
+}
+
+$_ = 'Bamm-----------bamm';
+if (/Bamm-*bamm/) {
+	say "It matches!(7)";
+}
+$_ = 'Bammbamm';
+if (/Bamm-*bamm/) {
+	say "It matches!(8)";
+}
+
+$_ = 'Bamm bamm';
+if (/Bamm *bamm/) {
+print "It matched!(9)\n";
+}
+
+$_ = 'Bamm bamm';
+if (/B.*m/) {
+print "It matched!(10)\n";
+}
+
+$_ = 'Bamm      bamm';
+if (/Bamm +bamm/) {
+	print "It matched!(11)\n";
+}
+$_ = 'Bammbamm';
+if (/Bamm +bamm/) {
+	print "It matched!(12)\n";
+}
+
+$_ = "yabbbba dabbba doo.";
+if (/ab{3}a/) {
+	print "It matched!(13)\n";
+}
+$_ = "yabbbba dabbba doo.";
+if (/ab{3}/) {
+	print "It matched!(14)\n";
+}
+
+$_ = "yabbbba dabbba doo.";
+if (/ab{2,3}a/) {
+	print "It matched!(15)\n";
+}
+$_ = "yabbbba dabbba doo.";
+if (/ab{3,}a/) {
+	print "It matched!(16)\n";
+}
+$_ = "yabbbba dabbba doo.";
+if (/ab{0,5}a/) {
+	print "It matched!(17)\n";
+}
+$_ = "yabbbba dabbba doo.";
+if (/ab{0,5}a/) { # will match
+	print "It matched!(18)\n";
+}
+

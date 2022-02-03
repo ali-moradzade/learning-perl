@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# sequences
+
+$_ = "yabba dabba doo";
+
+if (/abba/) {
+	say "It matched!(1)";
+}
+
+if (/ab ba/) {
+	say "It matched!(2)";
+}
+
+# matches everything
+if (//) {
+	say "It matched!(3)";
+}

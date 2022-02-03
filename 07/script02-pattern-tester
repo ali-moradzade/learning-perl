@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/02
+#=======================
+# use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# pattern tester
+
+$pattern = shift(@ARGV);
+say "Our pattern: $pattern";
+
+open TEST_FILE, '<', 'test-file';
+while (<TEST_FILE>) {
+	chomp;
+	say "$_";
+
+	if (/$pattern/) {
+		say "\tMatches";
+	} else {
+		say "\tDoesn't match";
+	}
+}

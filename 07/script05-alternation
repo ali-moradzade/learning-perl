@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# alternation
+
+foreach (qw/fred betty barney dino/) {
+	if (/fred|barney/) {
+		say "$_ matched!";
+	}
+}
+say "";
+
+foreach (qw/fred betty barney dino/) {
+	if (/fred|barney|betty/) {
+		say "$_ matched!";
+	}
+}
+say "";
+
+$_ = "Fred Rubble";
+if( /Fred|Wilma Flintstone/ ) { # unexpectedly matches
+	print "It matched!(1)\n";
+}
+$_ = "Fred Rubble";
+if( /(Fred|Wilma) Flintstone/ ) { # doesn't match
+	print "It matched!(2)\n";
+}
+
+$_ = "fred \t \t barney"; # could be tabs, spaces, or both
+if (/fred( |\t)+barney/) {
+	say "It matched!(3)";
+}
+
+$_ = "fred \t \t barney";
+if (/fred( +|\t+)barney/) {
+	say "It matched!(4)";
+}
+
+$_ = "Bamm-Bamm";
+if (/Bamm-?(B|b)amm/) {
+	say "The string has Bamm-Bamm";
+}

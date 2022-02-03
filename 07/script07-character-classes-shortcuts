@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# character classes shortcuts
+
+$_ = "fred \t \t barney";
+if (/fred\s+barney/) {
+	say "It matched!(1)";
+}
+$_ = "fred \t \t barney";
+if (/fred\h+barney/) {
+	say "It matched!(2)";
+}
+
+$_ = 'The HAL-9000 requires authorization to continue.';
+if (/HAL-\d+/) {
+	print "The string mentions some model of HAL computer.\n";
+}
+

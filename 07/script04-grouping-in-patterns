@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# grouping in patterns
+
+$_ = "abba";
+if (/(.)\1/) { # matches 'bb'
+	say "It matched same character next to itself!";
+}
+$_ = "yabba dabba doo";
+if (/y(....) d\1/) {
+	say "It matched the same after y and d!";
+}
+
+$_ = "yabba dabba doo";
+if (/y(.)(.)\2\1/) {
+	say "It matched after the y!";
+}
+
+$_ = "yabba dabba doo";
+if (/y((.)(.)\3\2) d\1/) {
+	say "It matched!(1)";
+}
+
+$_ = "aa11bb";
+if (/(.)\g{1}11/) {
+	print "It matched!(2)\n";
+}
+
+$_ = "aa11bb";
+if (/(.)\g{-1}11/) {
+	print "It matched!(3)\n";
+}
+
+$_ = "xaa11bb";
+if (/(.)(.)\g{-1}11/) {
+	print "It matched!(4)\n";
+}
+

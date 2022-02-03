@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex7 06 wilma and fred
+
+while (<>) {
+	chomp;
+	if (/fred.*wilma|wilma.*fred/) {
+		say;
+	}
+}

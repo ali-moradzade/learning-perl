@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex7 04 capital not all
+
+while (<>) {
+	chomp;
+	if (/([a-z]+[A-Z]+)|([A-Z]+[a-z]+[A-Z]+)|([A-Z]+[a-z]+)/) {
+		say;
+	}
+}

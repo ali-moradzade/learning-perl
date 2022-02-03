@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# character classes
+
+$_ = "The HAL-9000 requires authorization to continue.";
+if (/HAL-[0-9]+/) {
+	print "The string mentions some model of HAL computer.\n";
+}
+
+$_ = "Bamm-Bamm";
+if (/Bamm-?[Bb]amm/) {
+	say "The string has Bamm-Bamm";
+}

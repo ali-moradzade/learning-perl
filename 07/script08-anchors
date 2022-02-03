@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/03
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# anchors
+
+$_ = "https://github.com/ali-moradzade/";
+if (/\Ahttps?:/) {
+	say "Found a URL";
+}
+
+$_ = "~/ali/Pictures/mountain.png";
+if (/\.png\z/) {
+	say "Found a png picture.";
+}
