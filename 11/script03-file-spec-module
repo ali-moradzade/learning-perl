@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+use File::Basename;
+use File::Spec;
+
+# file spec module
+
+print "Please enter a filename: ";
+chomp(my $old_name = <STDIN>);
+
+my $dirname = dirname $old_name;
+my $basename = basename $old_name;
+
+$basename =~ s/^/not/;
+my $new_name = File::Spec->catfile($dirname, $basename);
+
+rename($old_name, $new_name)
+	or warn "Can't rename '$old_name' to '$new_name': $!";
