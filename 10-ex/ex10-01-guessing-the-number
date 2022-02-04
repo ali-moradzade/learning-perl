@@ -1,0 +1,42 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+#ex10 01 guessing the number
+
+my $secret_number = int(1 + rand 100);
+
+print "Guess a number between 1 and 100: (or press quit or exit) ";
+chomp(my $number = <STDIN>);
+
+while (1) {
+	if ($number =~ /\d+/) {
+		if ($number == $secret_number) {
+			say "You guessd correctly!";
+			last;
+		}
+		if ($number < $secret_number) {
+			say "Too low!";
+		} else {
+			say "Too high!";
+		}
+	} else {
+		if ($number =~ /^\s*$|quit|exit/i) {
+			say "\nThe secret number was: $secret_number";
+			say "Qutting the program ...";
+			last;
+		} else {
+			say "You should enter a number or quit/exit. try again.";
+		}
+	}
+	print "\n> ";
+	chomp($number = <STDIN>);
+}
+
+say "\nProgram finished successfully.";

@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# statement modifiers
+
+my $n = -5;
+say "$n is a negative number." if $n < 0;
+print " ", ($n += 2) while $n < 10;
+say "";

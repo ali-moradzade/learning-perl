@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# logical operators
+
+$dessert{'cake'} = 1;
+$dessert{'ice cream'} = 1;
+
+if ($dessert{'cake'} && $dessert{'ice cream'}) {
+	say "Hooray! Cake and ice cream!";
+} elsif ($dessert{'cake'} || $dessert{'ice cream'}) {
+	say "That's still good...";
+} else {
+	say "Oh damn it!";
+}

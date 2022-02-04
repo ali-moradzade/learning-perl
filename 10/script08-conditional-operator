@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# conditional operator
+
+my $n = 0;
+my $total = 20;
+my $average = $n ? ($total / $n) : "--------";
+say "$average";

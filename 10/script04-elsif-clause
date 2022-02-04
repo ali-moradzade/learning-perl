@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# elsif clause
+
+my $dino = "hello world";
+if ( ! defined $dino) {
+	print "The value is undef.\n";
+} elsif ($dino =~ /^-?\d+\.?$/) {
+	print "The value is an integer.\n";
+} elsif ($dino =~ /^-?\d*\.\d+$/) {
+	print "The value is a _simple_ floating-point number.\n";
+} elsif ($dino eq '') {
+	print "The value is the empty string.\n";
+} else {
+	print "The value is the string '$dino'.\n";
+}
+

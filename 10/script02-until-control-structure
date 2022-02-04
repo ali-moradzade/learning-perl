@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# until control structure
+
+my $i = 100;
+my $j = 1;
+
+until ($j > $i) {
+	$j *= 2;
+	say "$j";
+}

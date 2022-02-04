@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# autoincrement and autodecrement
+
+my $bedrock = 42;
+say "$bedrock";
+
+$bedrock++;
+say "$bedrock";
+
+$bedrock--;
+say "$bedrock";
+say "";
+
+my @people = qw/fred barney fred wilma dino barney fred pebbles/;
+my %count;
+say "@people";
+$count{$_}++ foreach @people;
+
+while (($k, $v) = each %count) {
+	printf "%7s: %s\n", $k, $v;
+}
+say "";
+
+@people = qw{fred barney bamm-bamm wilma dino barney betty pebbles};
+my %seen;
+foreach (@people) {
+	print "I've seen you somewhere before, $_!\n"
+		if $seen{$_}++;
+}
+

@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# unless control structure
+
+my $fred = '0no-modifier!';
+unless ($fred =~ /\A[A-Z_]\w*\z/i) {
+	say "The value of \$fred doesn't look like a Perl identifier name.";
+}
+
+my $fred = '0no-modifier!';
+if ( !($fred =~ /\A[A-Z_]\w*\z/i) ) {
+	say "The value of \$fred doesn't look like a Perl identifier name.";
+}

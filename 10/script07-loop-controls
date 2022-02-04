@@ -1,0 +1,70 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# loop controls
+
+# last = break;
+# while (<>) {
+# 	if (/__END__/) {
+# 		last;
+# 	} elsif (/fred/){
+# 		print
+# 	}
+# }
+
+# next = continue;
+# analyze words in the input file or files.
+# while (<>) {
+# 	foreach (split) {
+# 		$total++;
+# 		next if /\W/;
+# 		$valid++;
+# 		$count{$_}++;
+# 	}
+# }
+# 
+# printf "%s = %s\n%s = %s\n",
+# 	"total things", $total,
+# 	" valid words", $valid;
+# 
+# foreach $word (sort keys %count) {
+# 	printf "%10s: $count{$word} time(s).\n", $word;
+# }
+
+# Typing test
+# my @words = qw/fred barney pebbles dino wilma betty/;
+# my $errors = 0;
+# 
+# foreach (@words) {
+# 	## redo comes here ##
+# 	print "Type the world '$_': ";
+# 	chomp(my $try = <STDIN>);
+# 	if ($try ne $_) {
+# 		say "Sorry - That's not right.\n";
+# 		$errors++;
+# 		redo;
+# 	}
+# }
+# say "You've completed the test, with $errors errors.";
+
+foreach (1..10) {
+	say "Iteration number $_.\n";
+	print "Please choose: last, next, redo, or none of the above: ";
+	chomp(my $choice = <STDIN>);
+	say "";
+
+	last if $choice =~ /last/i;
+	next if $choice =~ /next/i;
+	redo if $choice =~ /redo/i;
+
+	say "That wasn't any of the choices... onward!\n";
+}
+
+say "That's all, folks!";

@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+# for control sctructure
+
+for ($i = 1; $i <= 10; $i++) {
+	say "I can count to $i!";
+}
