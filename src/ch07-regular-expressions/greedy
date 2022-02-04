@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#=======================
+# Author : Ali Moradzade
+# Created: 2022/02/04
+#=======================
+use warnings;
+use v5.10;
+use utf8;
+use autodie;
+
+use Regexp::Debugger;
+
+#greedy
+
+$_ = 'Bamm            bamm';
+if (/B.*m/) {
+	say "It matched!";
+}
